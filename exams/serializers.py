@@ -31,7 +31,7 @@ class ExamSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Exam
-        fields = ['id', 'name', 'questions']
+        fields = '__all__'
 
     def create(self, validated_data):
         """Create Exam along with Questions and Answers."""

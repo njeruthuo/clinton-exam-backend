@@ -40,7 +40,7 @@ INSTALLED_APPS = ['corsheaders', 'rest_framework', 'users', 'exams', 'rest_frame
                   'django.contrib.contenttypes',
                   'django.contrib.sessions',
                   'django.contrib.messages',
-                  'django.contrib.staticfiles',
+                  'django.contrib.staticfiles', 'nested_admin',
                   ]
 
 MIDDLEWARE = [
@@ -66,7 +66,7 @@ AUTHENTICATION_BACKENDS = [
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -133,11 +133,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles", 'static')
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-STORAGES = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
