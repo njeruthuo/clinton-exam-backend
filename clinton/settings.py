@@ -34,7 +34,7 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = ['corsheaders', 'rest_framework', 'users', 'exams',
+INSTALLED_APPS = ['corsheaders', 'rest_framework', 'users', 'exams', 'rest_framework.authtoken',
                   'django.contrib.admin',
                   'django.contrib.auth',
                   'django.contrib.contenttypes',
@@ -57,6 +57,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'clinton.urls'
 
 AUTH_USER_MODEL = 'users.User'
+
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',  # Default backend
+    'users.authentication.EmailOrUsernameBackend',   # Custom backend
+]
 
 TEMPLATES = [
     {
