@@ -16,22 +16,14 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-k)i1_pqkr2fr1c_!u&07xc-b77xbegpkzs@xxmup7-kvlc0fle'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh", 'localhost']
 
-# Application definition
 
 INSTALLED_APPS = ['corsheaders', 'rest_framework', 'users', 'exams', 'rest_framework.authtoken', 'cloudinary',
                   'cloudinary_storage',
@@ -145,16 +137,14 @@ STORAGES = {
     },
 }
 
-
-# Prevents non-hashed files from being served
 WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 WHITENOISE_MANIFEST_STRICT = False
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:5173',
+    'http://localhost:5173', "https://clinton-exam-frontend.vercel.app"
 ]
 
-CORS_ALLOW_CREDENTIALS = True  # ✅ Needed if using authentication/cookies
+CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_METHODS = ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS']
 CORS_ALLOW_HEADERS = ['*']
 
