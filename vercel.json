@@ -17,7 +17,7 @@
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "gray/wsgi.py"
+      "dest": "clinton/wsgi.py"
     }
   ]
 }

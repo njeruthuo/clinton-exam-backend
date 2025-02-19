@@ -13,6 +13,10 @@ python3 -m pip install --upgrade pip
 
 python3 -m pip install -r requirements.txt
 
-echo "Done..."
+echo "Installing requirements Done..."
+
+# echo "collect static begins...."
 
 # python3 manage.py collectstatic --noinput
+
+# echo "collect static done...."
