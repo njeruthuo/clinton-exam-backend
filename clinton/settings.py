@@ -15,6 +15,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 load_dotenv()
 
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 100000
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
