@@ -13,7 +13,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET')
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh", 'localhost']
+ALLOWED_HOSTS = ["127.0.0.1", ".vercel.app", ".now.sh", 'localhost',"clinton-exam-backend.onrender.com"]
 
 INSTALLED_APPS = [
     'corsheaders',
